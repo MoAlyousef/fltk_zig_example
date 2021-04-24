@@ -76,11 +76,11 @@ pub const Menu = struct {
         };
     }
 
-    pub fn handle(self: *Menu, cb: fn (ev: i32, data: ?*c_void) callconv(.C) i32, data: ?*c_void) void {
+    pub fn handle(self: *Menu, cb: fn (w: ?*c.Fl_Widget, ev: i32 data: ?*c_void) callconv(.C) i32, data: ?*c_void) void {
         c.Fl_Menu_Bar_handle(self.inner, cb, data);
     }
 
-    pub fn draw(self: *Menu, cb: fn (data: ?*c_void) callconv(.C) void, data: ?*c_void) void {
+    pub fn draw(self: *Menu, cb: fn (w: ?*c.Fl_Widget, data: ?*c_void) callconv(.C) void, data: ?*c_void) void {
         c.Fl_Menu_Bar_draw(self.inner, cb, data);
     }
 
@@ -173,11 +173,11 @@ pub const MenuBar = struct {
         };
     }
 
-    pub fn handle(self: *MenuBar, cb: fn (ev: i32, data: ?*c_void) callconv(.C) i32, data: ?*c_void) void {
+    pub fn handle(self: *MenuBar, cb: fn (w: ?*c.Fl_Widget, ev: i32 data: ?*c_void) callconv(.C) i32, data: ?*c_void) void {
         c.Fl_Menu_Bar_handle(self.inner, cb, data);
     }
 
-    pub fn draw(self: *MenuBar, cb: fn (data: ?*c_void) callconv(.C) void, data: ?*c_void) void {
+    pub fn draw(self: *MenuBar, cb: fn (w: ?*c.Fl_Widget, data: ?*c_void) callconv(.C) void, data: ?*c_void) void {
         c.Fl_Menu_Bar_draw(self.inner, cb, data);
     }
 };
@@ -230,11 +230,11 @@ pub const Choice = struct {
         };
     }
 
-    pub fn handle(self: *Menu, cb: fn (ev: i32, data: ?*c_void) callconv(.C) i32, data: ?*c_void) void {
+    pub fn handle(self: *Menu, cb: fn (w: ?*c.Fl_Widget, ev: i32 data: ?*c_void) callconv(.C) i32, data: ?*c_void) void {
         c.Fl_Choice_handle(self.inner, cb, data);
     }
 
-    pub fn draw(self: *Menu, cb: fn (data: ?*c_void) callconv(.C) void, data: ?*c_void) void {
+    pub fn draw(self: *Menu, cb: fn (w: ?*c.Fl_Widget, data: ?*c_void) callconv(.C) void, data: ?*c_void) void {
         c.Fl_Choice_draw(self.inner, cb, data);
     }
 };
@@ -287,11 +287,11 @@ pub const SysMenuBar = struct {
         };
     }
 
-    pub fn handle(self: *Menu, cb: fn (ev: i32, data: ?*c_void) callconv(.C) i32, data: ?*c_void) void {
+    pub fn handle(self: *Menu, cb: fn (w: ?*c.Fl_Widget, ev: i32 data: ?*c_void) callconv(.C) i32, data: ?*c_void) void {
         c.Fl_Sys_Menu_Bar_handle(self.inner, cb, data);
     }
 
-    pub fn draw(self: *Menu, cb: fn (data: ?*c_void) callconv(.C) void, data: ?*c_void) void {
+    pub fn draw(self: *Menu, cb: fn (w: ?*c.Fl_Widget, data: ?*c_void) callconv(.C) void, data: ?*c_void) void {
         c.Fl_Sys_Menu_Bar_draw(self.inner, cb, data);
     }
 };
